@@ -18,16 +18,11 @@ export const ParticlesAnimation = () => {
     }, []);
 
     return (
-        <Particles className="z-[1]"
+        <Particles className="z-[99]"
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
-                background: {
-                    color: {
-                        value: "#000000",
-                    },
-                },
                 fpsLimit: 120,
                 interactivity: {
                     events: {
@@ -72,7 +67,7 @@ export const ParticlesAnimation = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 2,
+                        speed: 3,
                         straight: false,
                     },
                     number: {
