@@ -15,7 +15,7 @@ function BackgroundImage() {
     <div>
       <Image 
       src={bg}
-      className='z-[100] w-full h-72'
+      className='z-[100] w-full rounded-lg h-72'
       />
       {/* Divider */}
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -42,8 +42,8 @@ function BrandImage() {
 function Text() {
   return (
     <div className='relative bottom-28 m-4 space-y-3'>
-      <h1 className='text-white text-4xl font-bold text-center'>0xZurvan</h1>
-      <div className='text-green text-lg font-medium text-center'>
+      <h1 className='text-white text-4xl font-bold font-oswald text-center'>0xZurvan</h1>
+      <div className='text-green text-lg font-medium font-oswald text-center'>
         <Typewriter
           options={{
             strings: [
@@ -75,7 +75,7 @@ function Icons() {
 
 export default function PersonalCard() {
   return (
-    <div className='absolute left-44 top-16 rounded bg-main w-[470px] h-[570px] z-[101]'>
+    <div className='absolute left-44 top-8 rounded-lg bg-main w-[470px] h-[620px] z-[102] shadow-2xl shadow-black'>
       <BackgroundImage />
       <BrandImage />
       <div className='flex flex-col items-center space-y-[-50px]'>

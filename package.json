@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "framer-motion": "^10.1.0",
+    "webpack": "^5.75.0"
+  }
+}

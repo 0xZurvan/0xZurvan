@@ -15,6 +15,9 @@ module.exports = {
       'white': '#ffff',
       'main': '#181d27',
     },
+    fontFamily: {
+      oswald: ['Oswald', 'sans-serif']
+    }
   },
   plugins: [],
 }
