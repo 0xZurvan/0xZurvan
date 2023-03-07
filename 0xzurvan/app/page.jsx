@@ -3,6 +3,7 @@
 import { DiJavascript } from 'react-icons/di';
 import { SiEthereum } from 'react-icons/si';
 import Testimonials from './Testimonials';
+import Skills from './Skills';
 
 function Circle() {
   return <span className='absolute opacity-30 rounded-full bg-green w-6 h-6'></span>
@@ -83,11 +84,24 @@ function TestimonialSection() {
   )
 }
 
+function SkillsSection() {
+  return (
+    <div className='flex flex-col items-start space-y-2 mx-8 mt-12 divide-y divide-green/30'>
+      <div>
+        <Circle />
+        <h2 className="font-oswald font-medium text-white text-2xl text-left">Skills</h2>
+      </div>
+      <Skills />
+    </div>
+  )
+}
+
 export default function About() {
   return (
     <main className='overflow-y-scroll absolute left-[610px] top-12 rounded-lg bg-main w-[670px] h-[590px] z-[101] px-8'>
       <AboutMe />
       <MyServices />
+      <SkillsSection />
       <TestimonialSection />
     </main>
   )

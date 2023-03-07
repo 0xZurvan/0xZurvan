@@ -28,7 +28,7 @@ export default function Nav() {
   return (
     <div className='absolute left-20 top-44 z-[101] flex flex-col items-start space-y-2'>
         <LinkLayout page="/" name="About" />
-        <LinkLayout page="" name="Projects" />
+        <LinkLayout page="/projects" name="Projects" />
         <LinkLayout page="" name="Blogs" />
         <LinkLayout page="" name="Contact" />
     </div>

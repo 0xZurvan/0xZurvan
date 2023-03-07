@@ -1,41 +1,60 @@
 'use client';
 
 import { ImQuotesLeft } from "react-icons/im";
-import { ImQuotesRight} from "react-icons/im";
+import { ImCircleRight } from "react-icons/im";
+import { ImCircleLeft } from "react-icons/im";
+
 import { motion } from 'framer-motion';
 import { TestimonialsData } from './TestimonialsData';
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Testimonials() {
-  const [width, setWidth] = useState(0);
- /*  const slider = useRef();
+  const [index, setIndex] = useState(0);
 
-  useEffect(()  => {
-    setWidth(slider.current.scrollWidth - slider.current.offsetWidth);
-  }, []); */
+  function handleForward() {
+    if (index < 2) {
+      setIndex(index + 1);
+    }
+  }
+
+  function handleBackwards() {
+    if (index !== 0) {
+      setIndex(index - 1);
+    }
+  }
+
+  const testimonial = TestimonialsData[index];
 
   return (
     <motion.div 
-     className='flex flex-row justify-between items-center overflow-hidden'
-     drag="x" 
-     dragConstraints={{ right: 0, left: 300}}
-     whileTap={{ cursor: "grabbing"}}
-     >
-      {TestimonialsData.map((testimonial, index) => {
-        return (
-          <motion.div className='w-screen overflow-hidden'>
-            <motion.div>
-              <ImQuotesLeft className='text-white opacity-70' />
-              <p className='h-32 font-oswald italic text-lg text-white opacity-70'>{ testimonial.text }</p>
-              <ImQuotesRight className='text-white opacity-70' />
-            </motion.div>
-            <motion.div>
-              <p className='font-oswald text-lg text-white'>{ testimonial.name } | { testimonial.profession }</p>
-              <p>{ index + 1 } of { TestimonialsData.length }</p>
-            </motion.div>
-          </motion.div>
-        )
-      })}
+    className='w-full flex flex-row justify-evenly items-center overflow-hidden pt-6'
+    >
+      <motion.button 
+      whileHover={{ scale: 1.2 }}
+      onHoverStart={e => {}}
+      onHoverEnd={e => {}}
+      >
+        <ImCircleLeft onClick={handleBackwards} className='text-white hover:text-green text-center w-6 h-6 opacity-70' />
+      </motion.button>
+
+      <motion.div layout className='flex flex-col items-center space-y-14'>
+        <motion.div>
+          <ImQuotesLeft className='text-white w-6 h-6 opacity-70' />
+          <motion.p className='w-80 h-32 font-oswald italic text-base text-center text-white opacity-70'>{ testimonial.text }</motion.p>
+        </motion.div>
+        <motion.div>
+          <motion.p className='mb-16 font-oswald text-base text-white text-center'>{ testimonial.name } | { testimonial.profession }</motion.p>
+        </motion.div>
+      </motion.div>
+
+      <motion.button
+      whileHover={{ scale: 1.2 }}
+      onHoverStart={e => {}}
+      onHoverEnd={e => {}}
+      >
+        <ImCircleRight onClick={handleForward} className='text-white hover:text-green text-center w-6 h-6 opacity-70' />
+      </motion.button>
+
     </motion.div>
   )
 }
