@@ -4,10 +4,7 @@ import { DiJavascript } from 'react-icons/di';
 import { SiEthereum } from 'react-icons/si';
 import Testimonials from './Testimonials';
 import Skills from './Skills';
-
-function Circle() {
-  return <span className='absolute opacity-30 rounded-full bg-green w-6 h-6'></span>
-}
+import Circle from './Circle';
 
 function AboutMe() {
   return (
