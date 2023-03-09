@@ -9,6 +9,9 @@ import { FaReddit } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 import Typewriter from 'typewriter-effect';
+import { Suspense } from "react";
+import Spinner from './Spinner';
+
 
 function BackgroundImage() {
   return (
@@ -79,7 +82,9 @@ export default function PersonalCard() {
       <BackgroundImage />
       <BrandImage />
       <div className='flex flex-col items-center space-y-[-50px]'>
-        <Text />
+        <Suspense fallback={<Spinner />}>
+          <Text />
+        </Suspense>  
         <Icons />
       </div>
     </div>

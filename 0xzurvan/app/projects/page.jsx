@@ -1,8 +1,12 @@
+'use client';
+
 import { ProjectsData } from './ProjectsData';
 import Circle from '../Circle';
 import { AiFillFolderOpen } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillEye } from "react-icons/ai";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 // TODO - Create 2 methods : filter main projects and filter secondary projects
 // TODO - Add two buttons to call the filters and display the data
@@ -18,7 +22,7 @@ function Stack({ stacks }) {
     items-baseline
     gap-2
     ">
-      {stacks .map(stack  => {
+      {stacks.map(stack  => {
         return <p 
         className="
         font-oswald
@@ -36,58 +40,124 @@ function Stack({ stacks }) {
 
 function ProjectCard({ title, description, stacks, timeline, link, github }) {
   return (
-    <div className='
-    w-[500px] 
+    <motion.div 
+    className='
+    w-[500px]
     h-[200px]
     flex
     flex-col
-    justify-items-start
-    bg-white 
-    shadow-2xl shadow-black
-    rouded-lg
+    bg-main
+    hover:border-2
+    hover:border-b-green
+    hover:border-l-green
+    hover:border-t-main
+    hover:border-r-main
+    shadow-xl shadow-black
+    rounded-lg
     py-6
     '>
 
-      <div className='flex flex-row justify-around items-baseline'>
-        <div className='flex flex-row items-baseline gap-4'>
-        <AiFillFolderOpen className='text-green' />
-          <h3 className='font-oswald font-bold text-green text-lg'>{ title }</h3>
-        </div>
-        {link !== "" ? <a href={ link }><AiFillEye className='text-main hover:text-green' /></a> : ""}
-        {github !== "" ? <a href={ github }><AiFillGithub className='text-main hover:text-green'  /></a> : ""}
-      </div>
+      <motion.div className='flex flex-row justify-between items-baseline px-6'>
+        <motion.div className='flex flex-row justify-evenly gap-3'>
+          <AiFillFolderOpen className='text-green w-6 h-6' />
+          <motion.h3 className='font-oswald font-bold text-green text-xl'>{ title }</motion.h3>
+        </motion.div>
+        <motion.div className='flex flex-row justify-evenly gap-2'>
+          {link !== "" ? <a href={ link }><AiFillEye className='text-green hover:text-darkGreen w-6 h-6' /></a> : ""}
+          {github !== "" ? <a href={ github }><AiFillGithub className='text-green hover:text-darkGreen w-6 h-6'  /></a> : ""}
+        </motion.div>
+      </motion.div>
 
-      <div className='flex flex-col justify-items-start gap-8'>
-        <p className='font-oswald font-normal text-sm text-main'>Build time: { timeline }</p>
-        <p className='font-oswald font-normal text-base text-main' >{ description }</p>
-        <Stack stacks={ stacks } />
-      </div>
-
-      <button>See more</button>
-
-    </div>
+      <motion.div className='flex flex-col justify-items-start gap-4 px-6 pt-2'>
+        <motion.p className='font-oswald font-normal text-sm text-white'>Build time: { timeline }</motion.p>
+        <motion.p className='font-oswald font-normal text-base text-white' >{ description }</motion.p>
+        <motion.div className='flex flex-row justify-between'>
+          <Stack stacks={ stacks } />
+          <motion.button className='font-oswald text-sm text-white hover:text-green mr-4'>See more</motion.button>
+        </motion.div>
+      </motion.div>
+ 
+    </motion.div>
   )
 }
 
 export default function Projects() {
-  const stack = ['stack', 'stack', 'stack', 'stack', 'stack'];
+
+  const [filter, setFilter] = useState(false);
+
+  const primaryProjects = ProjectsData.filter((project) => project.category === 'primary');
+
+  const secondaryProjects = ProjectsData.filter((project) => project.category === 'secondary');
+
+  const displayPrimaryProjects = primaryProjects.map(project => {
+    return <ProjectCard key={ project.id }
+      title={ project.title } 
+      description={ project.description }
+      stacks={ project.stack }
+      timeline={ project.timeline }
+      link={ project.link }
+      github={ project.github }
+    /> 
+  });
+
+  console.log("Primary projects", primaryProjects)
+
+  const displaySecondaryProjects = secondaryProjects.map(project =>  {
+    return <ProjectCard key={ project.id }
+      title={ project.title } 
+      description={ project.description }
+      stacks={ project.stack }
+      timeline={ project.timeline }
+      link={ project.link }
+      github={ project.github }
+    />
+  });
+
   return (
     <main className='overflow-y-scroll absolute left-[610px] top-12 rounded-lg bg-main w-[670px] h-[590px] z-[101] px-8'>
       <div className='space-y-2 mx-8 my-4 divide-y divide-green/30'>
-        <div className='flex flex-col'>
-          <Circle />
-          <h2 className="font-oswald font-medium text-white text-2xl text-left">Projects</h2>
+        <div className='flex flex-row justify-between items-baseline'>
+
+          <div className='flex flex-col'>
+            <Circle />
+            <h2 className="font-oswald font-medium text-white text-2xl text-left">Projects</h2>
+          </div>
+
+          <div className='flex flex-row justify-end gap-4'>
+            <button 
+            onClick={ () => setFilter(false) } 
+            className={filter === false ? 
+              'font-oswald font-medium text-base text-green'
+               : 
+              'font-oswald font-medium text-base text-white hover:text-green'
+            }
+            >
+              Primary
+            </button>
+            <button 
+            onClick={ () => setFilter(true)  } 
+            className={filter === true ? 
+              'font-oswald font-medium text-base text-green'
+               : 
+              'font-oswald font-medium text-base text-white hover:text-green'
+            }
+            >
+              Secondary
+            </button>
+          </div>
+
         </div>
 
-        <div className='pt-6'>
-        <ProjectCard 
-        title='Pris0nerz' 
-        description='lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem v' 
-        stacks={ stack }
-        timeline="6 months"
-        link="Hello"
-        github="hello"
-        /> 
+        <div>
+          {filter === false ? 
+            <div className='flex flex-col space-y-8 pt-6 pb-16'>
+              { displayPrimaryProjects }
+            </div>
+           : 
+            <div className='flex flex-col space-y-8 pt-6 pb-16' >
+              { displaySecondaryProjects }
+            </div>
+          }
         </div>
 
       </div>

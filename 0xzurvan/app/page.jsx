@@ -1,10 +1,12 @@
 'use client';
 
+import { Suspense } from "react";
 import { DiJavascript } from 'react-icons/di';
 import { SiEthereum } from 'react-icons/si';
 import Testimonials from './Testimonials';
 import Skills from './Skills';
 import Circle from './Circle';
+import Spinner from './Spinner';
 
 function AboutMe() {
   return (
@@ -96,10 +98,12 @@ function SkillsSection() {
 export default function About() {
   return (
     <main className='overflow-y-scroll absolute left-[610px] top-12 rounded-lg bg-main w-[670px] h-[590px] z-[101] px-8'>
-      <AboutMe />
-      <MyServices />
-      <SkillsSection />
-      <TestimonialSection />
+      <Suspense fallback={<Spinner />}>
+        <AboutMe />
+        <MyServices />
+        <SkillsSection />
+        <TestimonialSection />
+      </Suspense>
     </main>
   )
 }
