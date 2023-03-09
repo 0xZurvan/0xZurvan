@@ -20,5 +20,7 @@ module.exports = {
       oswald: ['Oswald', 'sans-serif']
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }

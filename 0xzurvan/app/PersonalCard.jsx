@@ -5,7 +5,6 @@ import brand_image from '/public/assets/brand_image.jpg';
 import bg from '/public/assets/bg-3.png';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FaReddit } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 import Typewriter from 'typewriter-effect';
@@ -67,11 +66,18 @@ function Text() {
 function Icons() {
   return (
     <div className='flex flex-row justify-center gap-4'>
-      <FaGithub className='text-white hover:text-green' />
-      <FaLinkedin className='text-white hover:text-green' />
-      <FaReddit  className='text-white hover:text-green' />
-      <FaTwitter className='text-white hover:text-green' />
-      <FaDiscord  className='text-white hover:text-green' />
+      <a href="https://github.com/0xZurvan">
+        <FaGithub className='text-white hover:text-green' />
+      </a>
+      <a href="https://www.linkedin.com/in/isaac-hernandez-643086199">
+        <FaLinkedin className='text-white hover:text-green' />
+      </a>
+      <a href="https://twitter.com/0xZurvan">
+        <FaTwitter className='text-white hover:text-green' />
+      </a>
+      <a href="https://discord.com/users/823992612028940319">
+        <FaDiscord  className='text-white hover:text-green' />
+      </a>
     </div>
   )
 }
@@ -82,9 +88,7 @@ export default function PersonalCard() {
       <BackgroundImage />
       <BrandImage />
       <div className='flex flex-col items-center space-y-[-50px]'>
-        <Suspense fallback={<Spinner />}>
-          <Text />
-        </Suspense>  
+        <Text />
         <Icons />
       </div>
     </div>

@@ -1,18 +1,19 @@
 'use client';
 
-import { ProgressBar } from 'react-loader-spinner';
+import { Rings } from 'react-loader-spinner';
 
 export default function Spinner() {
   return (
-    <div className='bg-main max-w-full max-h-full flex justify-center z-[103]'>
-      <ProgressBar
+    <div className='z-[104]'>
+      <Rings
       height="90"
       width="90"
-      ariaLabel="progress-bar-loading"
+      color="#4fa94d"
+      radius="6"
       wrapperStyle={{}}
-      wrapperClass="progress-bar-wrapper"
-      borderColor = '#38E54D'
-      barColor = '#38E54D'
+      wrapperClass=""
+      visible={true}
+      ariaLabel="rings-loading"
       />
     </div>
   )

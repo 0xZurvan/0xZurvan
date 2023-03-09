@@ -96,14 +96,13 @@ function SkillsSection() {
 }
 
 export default function About() {
+  
   return (
-    <main className='overflow-y-scroll absolute left-[610px] top-12 rounded-lg bg-main w-[670px] h-[590px] z-[101] px-8'>
-      <Suspense fallback={<Spinner />}>
-        <AboutMe />
-        <MyServices />
-        <SkillsSection />
-        <TestimonialSection />
-      </Suspense>
+    <main className='scrollbar-thin scrollbar-thumb-darkGreen scrollbar-track-main overflow-y-scroll absolute left-[610px] top-12 rounded-lg bg-main w-[670px] h-[590px] z-[101] px-8'>
+      <AboutMe />
+      <MyServices />
+      <SkillsSection />
+      <TestimonialSection />
     </main>
   )
 }

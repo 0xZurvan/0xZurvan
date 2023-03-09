@@ -73,7 +73,7 @@ function ProjectCard({ title, description, stacks, timeline, link, github }) {
         <motion.p className='font-oswald font-normal text-base text-white' >{ description }</motion.p>
         <motion.div className='flex flex-row justify-between'>
           <Stack stacks={ stacks } />
-          <motion.button className='font-oswald text-sm text-white hover:text-green mr-4'>See more</motion.button>
+          {/* <motion.button className='font-oswald text-sm text-white hover:text-green mr-4'>See more</motion.button> */}
         </motion.div>
       </motion.div>
  
@@ -86,7 +86,6 @@ export default function Projects() {
   const [filter, setFilter] = useState(false);
 
   const primaryProjects = ProjectsData.filter((project) => project.category === 'primary');
-
   const secondaryProjects = ProjectsData.filter((project) => project.category === 'secondary');
 
   const displayPrimaryProjects = primaryProjects.map(project => {
@@ -100,8 +99,6 @@ export default function Projects() {
     /> 
   });
 
-  console.log("Primary projects", primaryProjects)
-
   const displaySecondaryProjects = secondaryProjects.map(project =>  {
     return <ProjectCard key={ project.id }
       title={ project.title } 
@@ -114,7 +111,7 @@ export default function Projects() {
   });
 
   return (
-    <main className='overflow-y-scroll absolute left-[610px] top-12 rounded-lg bg-main w-[670px] h-[590px] z-[101] px-8'>
+    <main className='scrollbar-thin scrollbar-thumb-darkGreen scrollbar-track-main overflow-y-scroll absolute left-[610px] top-12 rounded-lg bg-main w-[670px] h-[590px] z-[101] px-8'>
       <div className='space-y-2 mx-8 my-4 divide-y divide-green/30'>
         <div className='flex flex-row justify-between items-baseline'>
 
