@@ -16,7 +16,7 @@ export const ParticlesAnimation = () => {
     }, []);
 
     return (
-        <Particles className="z-[99]"
+        <Particles className="z-[98]"
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}

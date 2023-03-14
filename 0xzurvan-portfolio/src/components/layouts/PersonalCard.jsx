@@ -6,6 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 import Typewriter from 'typewriter-effect';
+import Shadow from './Shadow';
 
 function BackgroundImage() {
   return (
@@ -77,15 +78,44 @@ function Icons() {
   )
 }
 
-export default function PersonalCard() {
+function CardUI() {
   return (
-    <div className='absolute left-44 top-8 rounded-lg bg-main w-[470px] h-[620px] z-[102] shadow-2xl shadow-black'>
+    <div 
+    className='
+    z-[102] 
+    hidden
+    xl:flex
+    xl:flex-col
+    xl:rounded-lg 
+    xl:bg-main 
+    xl:w-[470px] 
+    xl:h-[620px] 
+    xl:shadow-2xl 
+    xl:shadow-black
+    lg:flex
+    lg:flex-col
+    lg:rounded-lg 
+    lg:bg-main 
+    lg:w-[420px] 
+    lg:h-[620px] 
+    lg:shadow-2xl 
+    lg:shadow-black
+    '>
       <BackgroundImage />
       <BrandImage />
       <div className='flex flex-col items-center space-y-[-50px]'>
         <Text />
         <Icons />
       </div>
+    </div>
+  )
+}
+
+export default function PersonalCard() {
+  return (
+    <div className='flex flex-row space-x-[-430px] space-y-8'>
+      <Shadow />
+      <CardUI />
     </div>
   )
 }

@@ -1,7 +1,6 @@
 
 import { useState } from 'react';
 import ProjectCard from '../components/sections/projects/ProjectCard';
-import Circle from '../components/common/Circle';
 import { ProjectsData } from '../const/ProjectsData';
 
 export default function Projects() {
@@ -34,13 +33,38 @@ export default function Projects() {
   });
 
   return (
-    <main className='scrollbar-thin scrollbar-thumb-darkGreen scrollbar-track-main overflow-y-scroll absolute left-[610px] top-12 rounded-lg bg-main w-[670px] h-[590px] z-[101] px-8'>
+    <main 
+    className='
+    scrollbar-thin 
+    scrollbar-thumb-darkGreen 
+    scrollbar-track-main 
+    overflow-y-scroll 
+    overflow-x-hidden 
+    bg-main
+    z-[99]
+    flex flex-col
+    justify-start items-start
+    w-[350px]
+    h-[650px]
+    ml-10
+    rounded-lg
+    md:rounded-lg
+    md:w-[720px]
+    md:h-[590px] 
+    xl:rounded-lg 
+    xl:w-[670px] 
+    xl:h-[590px] 
+    lg:rounded-lg 
+    lg:w-[670px] 
+    lg:h-[590px] 
+    px-8
+    '
+    >
       <div className='space-y-2 mx-8 my-4 divide-y divide-green/30'>
         <div className='flex flex-row justify-between items-baseline'>
 
           <div className='flex flex-col'>
-            <Circle />
-            <h2 className="font-oswald font-medium text-white text-2xl text-left">Projects</h2>
+            <h2 className="font-oswald font-medium text-white text-xl text-center md:text-2xl xl:text-2xl xl:text-left lg:text-2xl lg:text-left">Projects</h2>
           </div>
 
           <div className='flex flex-row justify-end gap-4'>

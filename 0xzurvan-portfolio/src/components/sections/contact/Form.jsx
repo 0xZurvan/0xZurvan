@@ -53,7 +53,7 @@ export default function Form() {
   }
   
   return (
-    <div className="container mx-auto">
+    <div className="flex flex-col justify-start items-start">
       <div className="p-5 space-y-5">
         {touched === true ? <p className='font-oswald font-thin text-red text-base text-center'>Error: you need to fill all the information!</p> : ''}
         {submitted === true ? 

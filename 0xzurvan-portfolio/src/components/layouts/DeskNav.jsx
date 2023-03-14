@@ -38,10 +38,21 @@ function LinkLayout({ page, name }) {
   )
 }
 
-export default function Nav() {
+export default function DeskNav() {
 
   return (
-    <div className='absolute left-20 top-44 z-[101] flex flex-col items-start space-y-2 hover:space-y-4'>
+    <div 
+    className='
+    z-[101] 
+    hidden
+    xl:flex 
+    xl:flex-col 
+    xl:items-start 
+    xl:space-y-2 
+    lg:items-start 
+    lg:space-y-2 
+    hover:space-y-4
+    '>
         <LinkLayout page="/" name="About" />
         <LinkLayout page="/projects" name="Projects" />
         <LinkLayout page="/blog" name="Blogs" />

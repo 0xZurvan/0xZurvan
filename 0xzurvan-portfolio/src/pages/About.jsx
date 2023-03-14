@@ -6,7 +6,32 @@ import Testimonials from '../components/sections/about/Testimonials';
 export default function About() {
   
   return (
-    <main className='scrollbar-thin scrollbar-thumb-darkGreen scrollbar-track-main overflow-y-scroll absolute left-[610px] top-12 rounded-lg bg-main w-[670px] h-[590px] z-[101] px-8'>
+    <main 
+    className='
+    scrollbar-thin 
+    scrollbar-thumb-darkGreen 
+    scrollbar-track-main 
+    overflow-y-scroll 
+    overflow-x-hidden 
+    bg-main
+    z-[99]
+    flex flex-col
+    justify-start items-start
+    w-[350px]
+    h-[650px]
+    ml-10
+    rounded-lg
+    md:rounded-lg
+    md:w-[720px]
+    md:h-[590px] 
+    xl:rounded-lg 
+    xl:w-[670px] 
+    xl:h-[590px] 
+    lg:rounded-lg 
+    lg:w-[670px] 
+    lg:h-[590px] 
+    px-8
+    '>
       <AboutMe />
       <MyServices />
       <Skills />
