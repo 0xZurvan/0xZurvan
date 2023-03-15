@@ -103,10 +103,10 @@ function CardUI() {
     '>
       <BackgroundImage />
       <BrandImage />
-      <div className='flex flex-col items-center space-y-[-50px]'>
+      <div className='flex flex-col items-center space-y-[-40px]'>
         <Text />
         <Icons />
-      </div>
+      </div>  
     </div>
   )
 }
