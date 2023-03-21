@@ -34,11 +34,11 @@ export const ProjectsData = [
     id: 4,
     title: "S-P-D",
     description: "Storyline of detectives, fighting to find the true behind some murders and a governmental system that determines psychological state of every token.",
-    stack: ["Solidity", "Hardhat", "ERC721", "ERC20", "DAO"],
+    stack: ["Solidity", "Foundry", "ERC721", "ERC20", "DAO"],
     timeline: "3 months",
     link: "",
-    github: "https://github.com/IsaacHS5/S-P-D",
-    category: "secondary"
+    github: "https://github.com/0xZurvan/S_P_D",
+    category: "primary"
   },
   {
     id: 5,
@@ -59,5 +59,15 @@ export const ProjectsData = [
     link: "",
     github: "https://github.com/IsaacHS5/staking-sample",
     category: "secondary"
+  },
+  {
+    id: 7,
+    title: "Retro Ratz",
+    description: "NFT project with a simple and fun dynamic game. Evolving/leveling up pixelated rats art into a full retro rat by correctly answering questions.",
+    stack: ["Solidity", "Hardhat", "ERC20", "ERC721"],
+    timeline: "1 month",
+    link: "https://ratz.aztral.network/",
+    github: "https://github.com/0xZurvan/Retro-Ratz-Contracts",
+    category: "primary"
   }
 ]
