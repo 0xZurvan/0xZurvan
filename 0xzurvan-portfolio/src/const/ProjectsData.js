@@ -47,7 +47,7 @@ export const ProjectsData = [
     stack: ["Solidity", "Hardhat", "Uniswap"],
     timeline: "1 day",
     link: "",
-    github: "https://github.com/IsaacHS5/DEX",
+    github: "https://github.com/0xZurvan/DEX",
     category: "secondary"
   },
   {
@@ -57,7 +57,7 @@ export const ProjectsData = [
     stack: ["Solidity", "ERC20"],
     timeline: "1 day",
     link: "",
-    github: "https://github.com/IsaacHS5/staking-sample",
+    github: "https://github.com/0xZurvan/staking-sample",
     category: "secondary"
   },
   {
@@ -69,5 +69,25 @@ export const ProjectsData = [
     link: "https://ratz.aztral.network/",
     github: "https://github.com/0xZurvan/Retro-Ratz-Contracts",
     category: "primary"
+  },
+  {
+    id: 8,
+    title: "Time Bandits",
+    description: "NFTs with 5 morph states. Those NFTs morph based on how much time (ERC20 token) they holds.",
+    stack: ["Solidity", "Hardhat", "ERC20", "ERC721"],
+    timeline: "2 weeks",
+    link: "",
+    github: "https://github.com/0xZurvan/Time-Bandits",
+    category: "primary"
+  },
+  {
+    id: 9,
+    title: "0xZurvan Portfolio",
+    description: "Personal portfolio",
+    stack: ["React.js", "Vite", "TailwindCSS"],
+    timeline: "1 week",
+    link: "",
+    github: "https://github.com/0xZurvan/0xZurvan",
+    category: "secondary"
   }
 ]
