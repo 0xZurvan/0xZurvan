@@ -5,7 +5,7 @@ export const ProjectsData = [
     title: "Prisonerz",
     description: "A gamified NFT experience, where the decisions you make result in unique character rarity, outcomes & status throughout the Prisønverse.",
     stack: ["JavaScript", "Solidity", "Polygon", "Vue.js", "Tailwind"],
-    timeline: "6 months",
+    timeline: "In development",
     link: "https://pris0nerz.io/",
     github: "",
     category: "primary"
@@ -25,7 +25,7 @@ export const ProjectsData = [
     title: "Kiron2X",
     description: "A music + art project that seeks to experiment with NFT and crypto protocols. Each song is split into pieces ( or editions ) via ERC1155.",
     stack: ["JavaScript", "Solidity", "Vue.js", "Tailwind"],
-    timeline: "1 month",
+    timeline: "1 Month",
     link: "https://kiron2x.aztral.network/",
     github: "",
     category: "primary"
@@ -35,7 +35,7 @@ export const ProjectsData = [
     title: "S-P-D",
     description: "Storyline of detectives, fighting to find the true behind some murders and a governmental system that determines psychological state of every token.",
     stack: ["Solidity", "Foundry", "ERC721", "ERC20", "DAO"],
-    timeline: "3 months",
+    timeline: "3 Months",
     link: "",
     github: "https://github.com/0xZurvan/S_P_D",
     category: "primary"
@@ -45,7 +45,7 @@ export const ProjectsData = [
     title: "DEX",
     description: "Decentralized exchange contract implementing the 2 single and multihop swap approach using the Uniswap V3 protocol.",
     stack: ["Solidity", "Hardhat", "Uniswap"],
-    timeline: "1 day",
+    timeline: "1 Day",
     link: "",
     github: "https://github.com/0xZurvan/DEX",
     category: "secondary"
@@ -55,7 +55,7 @@ export const ProjectsData = [
     title: "Staking Sample",
     description: "Two very simple smart contracts to use as crypto holding to earn additional rewards.",
     stack: ["Solidity", "ERC20"],
-    timeline: "1 day",
+    timeline: "1 Day",
     link: "",
     github: "https://github.com/0xZurvan/staking-sample",
     category: "secondary"
@@ -65,7 +65,7 @@ export const ProjectsData = [
     title: "Retro Ratz",
     description: "NFT project with a simple and fun dynamic game. Evolving/leveling up pixelated rats art into a full retro rat by correctly answering questions.",
     stack: ["Solidity", "Hardhat", "ERC20", "ERC721"],
-    timeline: "1 month",
+    timeline: "1 Month",
     link: "https://ratz.aztral.network/",
     github: "https://github.com/0xZurvan/Retro-Ratz-Contracts",
     category: "primary"
@@ -75,7 +75,7 @@ export const ProjectsData = [
     title: "Time Bandits",
     description: "NFTs with 5 morph states. Those NFTs morph based on how much time (ERC20 token) they holds.",
     stack: ["Solidity", "Hardhat", "ERC20", "ERC721"],
-    timeline: "2 weeks",
+    timeline: "2 Weeks",
     link: "",
     github: "https://github.com/0xZurvan/Time-Bandits",
     category: "primary"
@@ -85,9 +85,19 @@ export const ProjectsData = [
     title: "0xZurvan Portfolio",
     description: "Personal portfolio",
     stack: ["React.js", "Vite", "TailwindCSS"],
-    timeline: "1 week",
+    timeline: "1 Week",
     link: "",
     github: "https://github.com/0xZurvan/0xZurvan",
+    category: "secondary"
+  },
+  {
+    id: 10,
+    title: "Zurcord",
+    description: "Simplistic realtime chat application",
+    stack: ["React.js", "Vite", "TailwindCSS", "Firebase"],
+    timeline: "2 Days",
+    link: "https://zurcord-c379f.web.app/",
+    github: "https://github.com/0xZurvan/Zurcord",
     category: "secondary"
   }
 ]
