@@ -32,6 +32,16 @@ export const ProjectsData = [
   },
   {
     id: 4,
+    title: "BlogZu",
+    description: "Open-Access Blogging Community for Writers and Readers",
+    stack: ["React", "TS", "Zustand", "Firabase", "TailwindCSS"],
+    timeline: "5-6 Days",
+    link: "https://blogzu.web.app/",
+    github: "https://github.com/0xZurvan/BlogZu",
+    category: "primary"
+  },
+  {
+    id: 5,
     title: "S-P-D",
     description: "Storyline of detectives, fighting to find the true behind some murders and a governmental system that determines psychological state of every token.",
     stack: ["Solidity", "Foundry", "ERC721", "ERC20", "DAO"],
@@ -41,7 +51,7 @@ export const ProjectsData = [
     category: "primary"
   },
   {
-    id: 5,
+    id: 6,
     title: "DEX",
     description: "Decentralized exchange contract implementing the 2 single and multihop swap approach using the Uniswap V3 protocol.",
     stack: ["Solidity", "Hardhat", "Uniswap"],
@@ -51,7 +61,7 @@ export const ProjectsData = [
     category: "secondary"
   },
   {
-    id: 6,
+    id: 7,
     title: "Staking Sample",
     description: "Two very simple smart contracts to use as crypto holding to earn additional rewards.",
     stack: ["Solidity", "ERC20"],
@@ -61,7 +71,7 @@ export const ProjectsData = [
     category: "secondary"
   },
   {
-    id: 7,
+    id: 8,
     title: "Retro Ratz",
     description: "NFT project with a simple and fun dynamic game. Evolving/leveling up pixelated rats art into a full retro rat by correctly answering questions.",
     stack: ["Solidity", "Hardhat", "ERC20", "ERC721"],
@@ -71,7 +81,7 @@ export const ProjectsData = [
     category: "primary"
   },
   {
-    id: 8,
+    id: 9,
     title: "Time Bandits",
     description: "NFTs with 5 morph states. Those NFTs morph based on how much time (ERC20 token) they holds.",
     stack: ["Solidity", "Hardhat", "ERC20", "ERC721"],
@@ -81,7 +91,7 @@ export const ProjectsData = [
     category: "primary"
   },
   {
-    id: 9,
+    id: 10,
     title: "0xZurvan Portfolio",
     description: "Personal portfolio",
     stack: ["React.js", "Vite", "TailwindCSS"],
@@ -91,7 +101,7 @@ export const ProjectsData = [
     category: "secondary"
   },
   {
-    id: 10,
+    id: 11,
     title: "Zurcord",
     description: "Simplistic realtime chat application",
     stack: ["React.js", "Vite", "TailwindCSS", "Firebase"],
