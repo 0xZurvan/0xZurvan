@@ -21,13 +21,13 @@ export const ParticlesAnimation = () => {
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
-                fpsLimit: 100,
+                fpsLimit: 3,
                 interactivity: {
                     events: {
-                        onClick: {
+                        /* onClick: {
                             enable: true,
                             mode: "push",
-                        },
+                        }, */
                         onHover: {
                             enable: true,
                             mode: "repulse",
@@ -36,10 +36,10 @@ export const ParticlesAnimation = () => {
                     },
                     modes: {
                         push: {
-                            quantity: 5,
+                            quantity: 2,
                         },
                         repulse: {
-                            distance: 300,
+                            distance: 200,
                             duration: 0.4,
                         },
                     },
@@ -65,15 +65,15 @@ export const ParticlesAnimation = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 2,
+                        speed: 1,
                         straight: false,
                     },
                     number: {
                         density: {
                             enable: true,
-                            area: 800,
+                            area: 400,
                         },
-                        value: 80,
+                        value: 30,
                     },
                     opacity: {
                         value: 0.5,

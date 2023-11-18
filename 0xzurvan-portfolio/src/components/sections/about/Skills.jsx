@@ -1,11 +1,10 @@
-import { motion } from 'framer-motion';
 import { SiSolidity } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { DiJavascript } from "react-icons/di";
 import { DiReact } from "react-icons/di";
-import { DiHtml5 } from "react-icons/di";
-import { DiCss3 } from "react-icons/di";
+import { SiNuxtdotjs } from "react-icons/si";
+import { SiSupabase } from "react-icons/si";
 import { RiVuejsFill } from "react-icons/ri";
 
 function FirstRow() {
@@ -51,7 +50,14 @@ function SecondRow() {
       <div className='flex flex-col items-center justify-evenly gap-2'>
         <RiVuejsFill className='w-10 h-10 md:w-12 md:h-12 xl:w-12 xl:h-12 lg:w-12 lg:h-12 text-green border border-green rounded-full p-2' />
         <p className='font-oswald text-sm md:text-base xl:text-base lg:text-base text-white'>
-          Vue.js
+          Vue
+        </p>
+      </div>
+
+      <div className='flex flex-col items-center justify-evenly gap-2'>
+        <SiNuxtdotjs className='w-10 h-10 md:w-12 md:h-12 xl:w-12 xl:h-12 lg:w-12 lg:h-12 text-green border border-green rounded-full p-2' />
+        <p className='font-oswald text-sm md:text-base xl:text-base lg:text-base text-white'>
+          Nuxt
         </p>
       </div>
 
@@ -63,16 +69,9 @@ function SecondRow() {
       </div>
 
       <div className='flex flex-col items-center justify-evenly gap-2'>
-        <DiHtml5 className='w-10 h-10 md:w-12 md:h-12 xl:w-12 xl:h-12 lg:w-12 lg:h-12 text-green border border-green rounded-full p-2' />
+        <SiSupabase className='w-10 h-10 md:w-12 md:h-12 xl:w-12 xl:h-12 lg:w-12 lg:h-12 text-green border border-green rounded-full p-2' />
         <p className='font-oswald text-sm md:text-base xl:text-base lg:text-base text-white'>
-          HTML5
-        </p>
-      </div>
-
-      <div className='flex flex-col items-center justify-evenly gap-2'>
-        <DiCss3 className='w-10 h-10 md:w-12 md:h-12 xl:w-12 xl:h-12 lg:w-12 lg:h-12 text-green border border-green rounded-full p-2' />
-        <p className='font-oswald text-sm md:text-base xl:text-base lg:text-base text-white'>
-          CSS
+          Supabase
         </p>
       </div>
 

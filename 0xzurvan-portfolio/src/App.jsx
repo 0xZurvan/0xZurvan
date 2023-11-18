@@ -2,7 +2,6 @@ import { ParticlesAnimation } from './components/layouts/ParticlesAnimation';
 import Spinner from './components/common/Spinner'
 import About from './pages/About';
 import Projects from './pages/Projects';
-import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import DeskNav from './components/layouts/DeskNav';
 import MobileNav from './components/layouts/MobileNav';
@@ -50,7 +49,6 @@ export default function App() {
               <Routes>
                 <Route path='/' element={<About />} />
                 <Route path='/projects' element={<Projects />} />
-                <Route path='/blog' element={<Blog />} />
                 <Route path='/contact' element={<Contact />} />
               </Routes>
               <button>
