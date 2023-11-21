@@ -17,7 +17,7 @@ export default function App() {
   if(loading === true) {
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
   }
 
   return (
@@ -44,7 +44,7 @@ export default function App() {
           xl:space-x-[-12px]
           '>
             <DeskNav />
-            <div className='flex flex-row justify-center items-center lg:space-x-[-30px] lg:space-y-10 xl:space-x-[-30px] xl:space-y-10'>
+            <div className='flex flex-row justify-center items-center lg:space-x-[-10px] lg:space-y-10 xl:space-x-[-10px] xl:space-y-10'>
               <PersonalCard />
               <Routes>
                 <Route path='/' element={<About />} />

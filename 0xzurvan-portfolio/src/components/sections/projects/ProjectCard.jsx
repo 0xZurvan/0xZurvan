@@ -25,6 +25,7 @@ export default function ProjectCard({
     lg:h-[200px]
     flex
     flex-col
+    justify-between
     bg-main
     hover:border-2
     hover:border-b-green
@@ -61,13 +62,12 @@ export default function ProjectCard({
         </motion.div>
       </motion.div>
 
-      <motion.div className="flex flex-col justify-items-start gap-4 px-6 pt-2">
+      <motion.div className="flex flex-col items-start space-y-6 px-6 pt-2">
         <motion.p className="font-oswald font-normal text-sm md:text-base lg:text-base xl:text-base text-white">
           {description}
         </motion.p>
         <motion.div className="flex flex-row justify-between">
           <Stack stacks={stacks} />
-          {/* <motion.button className='font-oswald text-sm text-white hover:text-green mr-4'>See more</motion.button> */}
         </motion.div>
       </motion.div>
     </motion.div>
