@@ -3,9 +3,9 @@ export const ProjectsData = [
     id: 1,
     title: "Prisonerz",
     description:
-      "A gamified NFT experience, where the decisions you make result in unique character rarity, outcomes & status throughout the Prisønverse.",
+      "A gamified NFT experience, where the decisions you make result in unique character rarity, outcomes & status throughout the Prisønverse. (Demo version)",
     stack: ["JavaScript", "Solidity", "Polygon", "Vue.js", "Tailwind"],
-    link: "https://pris0nerz.io/",
+    link: "https://pris0nerz-demo.netlify.app/",
     github: "",
     category: "primary",
   },
