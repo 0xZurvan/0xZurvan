@@ -4,7 +4,6 @@ import { loadFull } from "tsparticles";
 
 export const ParticlesAnimation = () => {
     const particlesInit = useCallback(async engine => {
-        console.log(engine);
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
         // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
         // starting from v2 you can add only the features you need reducing the bundle size
@@ -24,10 +23,7 @@ export const ParticlesAnimation = () => {
                 fpsLimit: 3,
                 interactivity: {
                     events: {
-                        /* onClick: {
-                            enable: true,
-                            mode: "push",
-                        }, */
+                   
                         onHover: {
                             enable: true,
                             mode: "repulse",
@@ -48,7 +44,7 @@ export const ParticlesAnimation = () => {
                     color: {
                         value: "#38E54D",
                     },
-                    links: {
+                    stars: {
                         color: "#38E54D",
                         distance: 150,
                         enable: true,
@@ -79,12 +75,13 @@ export const ParticlesAnimation = () => {
                         value: 0.5,
                     },
                     shape: {
-                        type: "circles",
+                        type: "circle",
                     },
                     size: {
                         value: { min: 1, max: 5 },
                     },
                 },
+                preset: "stars",
                 detectRetina: true,
             }}
         />
