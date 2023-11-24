@@ -22,16 +22,16 @@ export default function AboutMe() {
         </p>
         <ul className="grid grid-cols-2 place-content-evenly gap-2">
           <li className="font-oswald font-thin text-white text-[10px] md:text-base xl:text-base lg:text-base">
-            EXPERIENCE-2 Years
+            EXPERIENCE - 3 Years
           </li>
           <li className="font-oswald font-thin text-white text-[10px] md:text-base xl:text-base lg:text-base">
-            FOR HIRE-Available
+            FULL TIME JOB - Available
           </li>
           <li className="font-oswald font-thin text-white text-[10px] md:text-base xl:text-base lg:text-base">
-            FREELANCE-Available
+            FREELANCE - Available
           </li>
           <li className="font-oswald font-thin text-white text-[10px] md:text-base xl:text-base lg:text-base">
-            RESIDENCE-Dominican Republic
+            RESIDENCE - Dominican Republic
           </li>
         </ul>
       </div>

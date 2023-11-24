@@ -28,7 +28,10 @@ function Icons() {
       <a href="https://github.com/0xZurvan" target="_blank">
         <FaGithub className="text-white hover:text-green" />
       </a>
-      <a href="https://www.linkedin.com/in/isaac-hernandez-643086199" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/isaac-hernandez-643086199"
+        target="_blank"
+      >
         <FaLinkedin className="text-white hover:text-green" />
       </a>
       <a href="https://twitter.com/0xZurvan" target="_blank">
