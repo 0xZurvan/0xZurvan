@@ -127,10 +127,19 @@ export default function MobileNav({ nav, onClick }) {
           <BrandImage />
           <Text />
           <Icons />
-          <div className="flex flex-col items-center">
-            <LinkLayout page="/" name="About" />
-            <LinkLayout page="/projects" name="Projects" />
-            <LinkLayout page="/contact" name="Contact" />
+          <div className="flex flex-col space-y-10">
+            <div className="flex flex-col items-center">
+              <LinkLayout page="/" name="About" />
+              <LinkLayout page="/projects" name="Projects" />
+              <LinkLayout page="/contact" name="Contact" />
+            </div>
+            <a
+              href="./Resume.pdf"
+              target="_blank"
+              className="text-green text-center text-sm font-oswald"
+            >
+              Download CV
+            </a>
           </div>
         </div>
       )}
