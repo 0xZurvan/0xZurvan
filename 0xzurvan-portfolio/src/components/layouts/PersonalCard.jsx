@@ -117,6 +117,7 @@ function CardUI() {
     hidden
     xl:flex
     xl:flex-col
+    xl:space-y-2
     xl:rounded-lg 
     xl:bg-main 
     xl:w-[470px] 
@@ -139,6 +140,7 @@ function CardUI() {
         <Text />
         <Icons />
       </div>
+      <a href="./Resume.pdf" target="_blank" className="text-green text-center font-oswald">Download CV</a>
     </div>
   );
 }
