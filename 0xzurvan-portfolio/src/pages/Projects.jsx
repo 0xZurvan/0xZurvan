@@ -3,14 +3,14 @@ import ProjectCard from "../components/sections/projects/ProjectCard";
 import { ProjectsData } from "../const/ProjectsData";
 
 export default function Projects() {
-  const [filter, setFilter] = useState(false);
+  // const [filter, setFilter] = useState(false);
 
   const primaryProjects = ProjectsData.filter(
     (project) => project.category === "primary"
   );
-  const secondaryProjects = ProjectsData.filter(
+  /* const secondaryProjects = ProjectsData.filter(
     (project) => project.category === "secondary"
-  );
+  ); */
 
   const displayPrimaryProjects = primaryProjects.map((project) => {
     return (
@@ -26,7 +26,7 @@ export default function Projects() {
     );
   });
 
-  const displaySecondaryProjects = secondaryProjects.map((project) => {
+  /* const displaySecondaryProjects = secondaryProjects.map((project) => {
     return (
       <ProjectCard
         key={project.id}
@@ -38,7 +38,7 @@ export default function Projects() {
         github={project.github}
       />
     );
-  });
+  }); */
 
   return (
     <main
@@ -76,7 +76,7 @@ export default function Projects() {
             </h2>
           </div>
 
-          <div className="flex flex-row justify-end gap-4">
+          {/* <div className="flex flex-row justify-end gap-4">
             <button
               onClick={() => setFilter(false)}
               className={
@@ -97,19 +97,19 @@ export default function Projects() {
             >
               Secondary
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div>
-          {filter === false ? (
+          {/* {filter === false ? ( */}
             <div className="flex flex-col space-y-8 pt-6 pb-16">
               {displayPrimaryProjects}
             </div>
-          ) : (
+          {/* ) : (
             <div className="flex flex-col space-y-8 pt-6 pb-16">
               {displaySecondaryProjects}
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </main>
