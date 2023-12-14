@@ -47,5 +47,14 @@ export const ProjectsData = [
     link: "https://retro-ratz.web.app/",
     github: "https://github.com/0xZurvan/Retro-Ratz-Contracts",
     category: "primary",
+  },
+  {
+    id: 5,
+    title: "Semplice.js",
+    description: "Web3 integration library built on top of ethers.js to help you integrate your contracts with simplicity.",
+    stack: ["TypeScript", "tsup", "ethers.js", "npm"],
+    link: "",
+    github: "https://github.com/0xZurvan/semplice.js",
+    category: "primary",
   }
 ];
