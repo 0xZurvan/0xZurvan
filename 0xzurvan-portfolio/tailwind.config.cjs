@@ -10,7 +10,7 @@ module.exports = {
       'green': '#38E54D',
       'darkGreen': '#306844',
       'white': '#ffff',
-      'main': '#181d27',
+      'main': '#0E0E10',
       'red': '#E21818'
     },
     fontFamily: {
