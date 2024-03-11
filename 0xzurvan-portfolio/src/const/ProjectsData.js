@@ -1,6 +1,16 @@
 export const ProjectsData = [
   {
     id: 1,
+    title: "AudioDeck",
+    description:
+      "Music streaming full stack application, where you can listen to songs, create albums, and playlists.",
+    stack: ["Go", "Postgress", "Supabase", "TypeScript", "Nuxt.js", "Tailwind"],
+    link: "https://audiodeck.netlify.app/",
+    github: "https://github.com/0xZurvan/AudioDeck",
+    category: "primary",
+  },
+  {
+    id: 2,
     title: "Prisonerz",
     description:
       "A gamified NFT experience, where the decisions you make result in unique character rarity, outcomes & status throughout the Prisønverse. (Demo version)",
@@ -10,7 +20,7 @@ export const ProjectsData = [
     category: "primary",
   },
   {
-    id: 2,
+    id: 3,
     title: "Kiron",
     description: "Empower your creations with our blockchain tools, turbocharging NFTs and digital assets for creators. Unleash the full potential of your work with seamless integration and enhanced value. Elevate your NFT game effortlessly.",
     stack: ["Vue", "JavaScript", "TailwindCSS", "Solidity"],
@@ -19,7 +29,7 @@ export const ProjectsData = [
     category: "primary",
   },
   {
-    id: 3,
+    id: 4,
     title: "MintCross",
     description:
       "Across-chain decentralized application with minting capabilities and streamlined bridging functionality between the Sepolia and Mumbai chains.",
@@ -29,7 +39,7 @@ export const ProjectsData = [
     category: "primary",
   },
   {
-    id: 4,
+    id: 5,
     title: "Aztral",
     description:
       "A development studio and collective of creator's striving to make fun and innovative products with technologies.",
@@ -39,7 +49,7 @@ export const ProjectsData = [
     category: "primary",
   },
   {
-    id: 5,
+    id: 6,
     title: "Retro Ratz",
     description:
       "NFT project with a simple and fun dynamic game. Evolving/leveling up pixelated rats art into a full retro rat by correctly answering questions.",
@@ -49,7 +59,7 @@ export const ProjectsData = [
     category: "primary",
   },
   {
-    id: 5,
+    id: 7,
     title: "Semplice.js",
     description: "Web3 integration library built on top of ethers.js to help you integrate your contracts with simplicity.",
     stack: ["TypeScript", "tsup", "ethers.js", "npm"],
